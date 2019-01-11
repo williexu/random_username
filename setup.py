@@ -1,19 +1,18 @@
-import pathlib
 from setuptools import setup, find_packages
 
 
-VERSION = "1.0.0"
+VERSION = "1.0.2"
 
 DEPENDENCIES = []
 
 # The text of the README file
-with open('README.md', encoding='utf-8') as f:
+with open('README.md') as f:
     README = f.read()
 
 # This call to setup() does all the work
 setup(
     name="random-username",
-    version="1.0.7",
+    version=VERSION,
     description="Randomly generate compelling usernames.",
     long_description=README,
     long_description_content_type="text/markdown",

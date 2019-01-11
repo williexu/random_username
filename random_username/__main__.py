@@ -8,7 +8,7 @@ def main():
                         help='Number of results to return')
     args = parser.parse_args()
 
-    for username in generate_username(args.num_results):
+    for username in generate_username(num_results=args.num_results):
         print(username)
 
 

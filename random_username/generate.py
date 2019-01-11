@@ -2,7 +2,7 @@ import os
 import random
 
 
-def generate_username(num_results):
+def generate_username(num_results=1):
     directory_path = os.path.dirname(__file__)
     adjectives, nouns = [], []
     with open(os.path.join(directory_path, 'data', 'adjectives.txt'), 'r') as file_adjective:
