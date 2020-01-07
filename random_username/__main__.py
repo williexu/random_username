@@ -6,6 +6,8 @@ def main():
     parser = argparse.ArgumentParser(description='Generate Compelling Usernames.')
     parser.add_argument('num_results', type=int, default=1, nargs='?',
                         help='Number of results to return')
+    parser.add_argument('num_digits', type=int, default=1, nargs='?',
+                        help='Number of digits to append')
     args = parser.parse_args()
 
     for username in generate_username(num_results=args.num_results):

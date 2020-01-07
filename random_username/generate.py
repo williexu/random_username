@@ -2,7 +2,7 @@ import os
 import random
 
 
-def generate_username(num_results=1):
+def generate_username(num_results=1, num_digits=1):
     directory_path = os.path.dirname(__file__)
     adjectives, nouns = [], []
     with open(os.path.join(directory_path, 'data', 'adjectives.txt'), 'r') as file_adjective:
@@ -16,7 +16,8 @@ def generate_username(num_results=1):
     for _ in range(num_results):
         adjective = random.choice(adjectives)
         noun = random.choice(nouns).capitalize()
-        num = str(random.randrange(10))
-        usernames.append(adjective + noun + num)
+        if num_digits >=1:        
+            num = str(random.randrange(10**num_digits))
+            usernames.append(adjective + noun + num)
     
     return usernames
