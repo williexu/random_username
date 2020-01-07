@@ -17,7 +17,7 @@ def generate_username(num_results=1, num_digits=1):
         adjective = random.choice(adjectives)
         noun = random.choice(nouns).capitalize()
         if num_digits >=1:        
-            num = str(random.randrange(10*num_digits))
+            num = str(random.randrange(10**num_digits))
             usernames.append(adjective + noun + num)
     
     return usernames
