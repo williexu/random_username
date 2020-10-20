@@ -1,5 +1,5 @@
 import argparse
-from random_username.generate import generate_username
+from random_username.generate import UsernameGenerator
 
 
 def main():
@@ -8,9 +8,9 @@ def main():
                         help='Number of results to return')
     args = parser.parse_args()
 
-    for username in generate_username(num_results=args.num_results):
+    gen = UsernameGenerator()
+    for username in gen.generate_usernames(num_results=args.num_results):
         print(username)
-
 
 if __name__ == "__main__":
     main()
