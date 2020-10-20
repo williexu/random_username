@@ -43,6 +43,6 @@ To generate usernames, call the program like so (not specifying a number will de
 
 You can also call the Random Username Generator from your own python code by importing from `random_username.generate`
 
-    >>> from random_username.generate import generate_username
-    >>> generate_username(5)
+    >>> from random_username.generate import UsernameGenerator
+    >>> UsernameGenerator().generate_username(5)
     ['insecureJaguar0', 'spiritedMuesli8', 'cautiousSmelt2', 'mereVenison4', 'offendedPie6']

@@ -8,8 +8,7 @@ def main():
                         help='Number of results to return')
     args = parser.parse_args()
 
-    gen = UsernameGenerator()
-    for username in gen.generate_usernames(num_results=args.num_results):
+    for username in UsernameGenerator().generate_usernames(num_results=args.num_results):
         print(username)
 
 if __name__ == "__main__":
